@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PandaDoc · LinkedIn Performance Report · Mar–May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#6CBE38;
+    --green-soft:rgba(108,190,56,.14);
+    --green-line:rgba(108,190,56,.35);
+    --bg:#0F1629;
+    --bg-card:#161f38;
+    --bg-card-2:#1b2540;
+    --ink:#eef2fb;
+    --muted:#9aa6c4;
+    --line:rgba(255,255,255,.09);
+    --rally:#3D68F5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 28px 80px;}
+  h1,h2,h3,.mono-h{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;}
+  .eyebrow{font-family:'Space Grotesk',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:600;}
+
+  /* Header */
+  header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:40px;}
+  header h1{font-size:34px;font-weight:700;margin:10px 0 6px;line-height:1.1;}
+  header .sub{color:var(--muted);font-size:15px;}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--green-soft);border:1px solid var(--green-line);color:var(--green);font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;padding:7px 14px;border-radius:999px;letter-spacing:.04em;}
+  .brand-lockup{display:inline-flex;align-items:center;gap:13px;margin-bottom:4px;}
+  .pd-logo{width:44px;height:44px;border-radius:12px;display:block;}
+  .brand-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;letter-spacing:-0.01em;color:var(--ink);}
+  .brand-name .brand-sub{color:var(--muted);font-weight:500;}
+  .rally-badge{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-family:'Space Grotesk',sans-serif;}
+  .rally-badge .r{width:34px;height:34px;display:block;}
+  .rally-badge .r svg{width:34px;height:34px;display:block;border-radius:9px;}
+
+  /* Hero stat */
+  .hero{background:linear-gradient(135deg,#17223e,#121a30);border:1px solid var(--line);border-radius:22px;padding:38px 36px;margin-bottom:18px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;background:radial-gradient(circle,var(--green-soft),transparent 70%);}
+  .hero .big{font-family:'Space Grotesk',sans-serif;font-size:84px;font-weight:700;line-height:1;color:var(--green);letter-spacing:-0.03em;}
+  .hero .big small{font-size:24px;color:var(--ink);font-weight:500;margin-left:8px;letter-spacing:0;}
+  .hero .label{color:var(--muted);font-size:15px;margin-top:8px;max-width:560px;}
+  .hero-mini{display:flex;gap:36px;flex-wrap:wrap;margin-top:26px;position:relative;z-index:1;}
+  .hero-mini div .n{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;}
+  .hero-mini div .t{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;}
+
+  /* Section */
+  section{margin-top:46px;}
+  section > .eyebrow{display:block;margin-bottom:6px;}
+  section h2{font-size:24px;font-weight:700;margin:0 0 22px;}
+
+  /* Leaderboard bars */
+  .bars{display:flex;flex-direction:column;gap:18px;}
+  .bar-row{display:grid;grid-template-columns:190px 1fr 86px;align-items:center;gap:16px;}
+  .bar-row .who{font-weight:600;font-size:14.5px;}
+  .bar-row .who span{display:block;color:var(--muted);font-weight:400;font-size:11.5px;}
+  .track{background:rgba(255,255,255,.06);border-radius:8px;height:30px;overflow:hidden;}
+  .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#5aa82f,var(--green));display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#06210a;font-weight:700;font-family:'Space Grotesk',sans-serif;font-size:13px;}
+  .bar-row .share{text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--muted);font-size:14px;}
+
+  /* Exec cards */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;}
+  .card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+  .card .name{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;}
+  .card .role{color:var(--muted);font-size:12.5px;margin-top:2px;}
+  .card .startchip{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;color:var(--green);background:var(--green-soft);border:1px solid var(--green-line);padding:5px 10px;border-radius:999px;white-space:nowrap;}
+  .card .total{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:var(--green);line-height:1;margin:18px 0 2px;}
+  .card .total small{font-size:14px;color:var(--muted);font-weight:500;}
+  .postcard{margin-top:18px;background:var(--bg-card-2);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:0 12px 12px 0;padding:16px 18px;}
+  .postcard .ptitle{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:10px;}
+  .postcard .ptext{font-size:13.5px;color:#dfe6f7;white-space:pre-line;max-height:230px;overflow:auto;padding-right:6px;}
+  .postcard .ptext::-webkit-scrollbar{width:6px}.postcard .ptext::-webkit-scrollbar-thumb{background:var(--green-line);border-radius:4px}
+  .pstats{display:flex;gap:18px;margin-top:14px;border-top:1px solid var(--line);padding-top:12px;}
+  .pstats div{font-family:'Space Grotesk',sans-serif;}
+  .pstats .n{font-size:18px;font-weight:700;}
+  .pstats .t{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+
+  /* Timeline */
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .month{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;}
+  .month .m{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--green);letter-spacing:.04em;}
+  .month .who2{margin-top:12px;font-size:14px;color:#dfe6f7;}
+  .month .who2 b{font-weight:600}
+  .month .who2 span{color:var(--muted);font-size:12px;}
+  .month .agg{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin-top:14px;}
+  .month .agg small{font-size:12px;color:var(--muted);font-weight:500}
+
+  /* note / footer */
+  .note{margin-top:40px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:20px 22px;color:var(--muted);font-size:12.5px;line-height:1.7;}
+  .note b{color:var(--ink);}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:12px;}
+
+  /* Standout CTA */
+  .cta{margin-top:28px;background:linear-gradient(135deg,var(--green),#5aa82f);border-radius:22px;padding:38px 40px;position:relative;overflow:hidden;box-shadow:0 18px 50px rgba(108,190,56,.22);}
+  .cta::after{content:"";position:absolute;right:-70px;bottom:-90px;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 70%);}
+  .cta .ck{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#0c2a10;opacity:.8;position:relative;z-index:1;}
+  .cta h2{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;margin:10px 0 10px;color:#06210a;letter-spacing:-0.02em;max-width:640px;position:relative;z-index:1;}
+  .cta p{font-size:15.5px;line-height:1.6;max-width:640px;margin:0;color:#0c2a10;position:relative;z-index:1;}
+  .cta p b{color:#06210a;}
+  .cta .btn{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:#0F1629;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14.5px;padding:14px 24px;border-radius:999px;position:relative;z-index:1;}
+  .cta .btn .arr{color:var(--green);font-weight:700;}
+
+  @media(max-width:760px){.grid,.timeline{grid-template-columns:1fr}.bar-row{grid-template-columns:120px 1fr 56px}.hero .big{font-size:60px}.cta h2{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brand-lockup"><img class="pd-logo" src="data:image/png;base64,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" alt="PandaDoc logo"/><span class="brand-name">PandaDoc <span class="brand-sub">· LinkedIn</span></span></div>
+      <h1>LinkedIn Performance Report</h1>
+      <div class="sub">Executive thought-leadership activity · March 1 – May 24, 2026</div>
+    </div>
+    <div class="rally-badge"><span class="r"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="rgrad" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5179F1"/><stop offset="1" stop-color="#7A6AE6"/></linearGradient></defs><rect width="64" height="64" rx="15" fill="url(#rgrad)"/><g fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="15.5" y="26.5" width="8" height="11" rx="3.2"/><path d="M23.5 24.5 L41 18 L38 46 L23.5 39.5 Z"/></g></svg></span><div>Prepared by RallyUp<br>Q2 2026</div></div>
+  </header>
+
+  <!-- CONSOLIDATED HERO -->
+  <span class="eyebrow">Consolidated</span>
+  <div class="hero">
+    <div class="big">3,862<small>total engagements</small></div>
+    <div class="label">Reactions, comments, and reposts across all tracked PandaDoc executives over the period.</div>
+    <div class="hero-mini">
+      <div><div class="n">4</div><div class="t">Executives</div></div>
+      <div><div class="n">Keith Rabkin</div><div class="t">Top performer · 2,124</div></div>
+      <div><div class="n">306</div><div class="t">Top post · reactions (Keith)</div></div>
+      <div><div class="n">1,000+</div><div class="t">Engagements on top 4 posts alone</div></div>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD -->
+  <section>
+    <span class="eyebrow">By executive</span>
+    <h2>Engagement leaderboard</h2>
+    <div class="bars">
+      <div class="bar-row">
+        <div class="who">Keith Rabkin<span>CEO · since March</span></div>
+        <div class="track"><div class="fill" style="width:100%">2,124</div></div>
+        <div class="share">55%</div>
+      </div>
+      <div class="bar-row">
+        <div class="who">Jennifer Nguyen<span>Sr. Dir, Account Mgmt · since April</span></div>
+        <div class="track"><div class="fill" style="width:50.5%">1,072</div></div>
+        <div class="share">28%</div>
+      </div>
+      <div class="bar-row">
+        <div class="who">Stephanie Jenkins<span>SVP Global Sales · since March</span></div>
+        <div class="track"><div class="fill" style="width:22.7%">482</div></div>
+        <div class="share">12%</div>
+      </div>
+      <div class="bar-row">
+        <div class="who">Robin Corralez<span>Chief People Officer · since May</span></div>
+        <div class="track"><div class="fill" style="width:8.7%">184</div></div>
+        <div class="share">5%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXEC CARDS + BEST POSTS -->
+  <section>
+    <span class="eyebrow">By executive · top post</span>
+    <h2>Best post per leader</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="top">
+          <div><div class="name">Keith Rabkin</div><div class="role">Chief Executive Officer</div></div>
+          <div class="startchip">Since March</div>
+        </div>
+        <div class="total">2,124 <small>total engagements</small></div>
+        <div class="postcard">
+          <div class="ptitle">Top post</div>
+          <div class="ptext">Here is something I think about a lot:
+
+Every business runs on agreements. Proposals, contracts, NDAs, SOWs, invoices. They are the connective tissue of commerce. And yet, for most businesses, these documents live in silos. They are completely disconnected.
+
+What if they weren't? What if the information from your NDA automatically carried over to your SOW? What if your sales proposal fed directly into your invoice? What if AI could surface insights across all of your agreements that you never knew existed?
+
+That is the future we are building at PandaDoc. An agreement hub where data flows between documents, where AI powers business intelligence on your agreements, and where siloed processes finally connect.
+
+The companies that treat their agreements as connected data with real stored information, not just PDFs to sign, will have a massive advantage.
+
+We are just getting started, and I have never been more excited about where this is heading.</div>
+          <div class="pstats">
+            <div><div class="n">306</div><div class="t">Reactions</div></div>
+            <div><div class="n">69</div><div class="t">Comments</div></div>
+            <div><div class="n">4</div><div class="t">Reposts</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div><div class="name">Jennifer (Taussig) Nguyen</div><div class="role">Sr. Director, Account Management</div></div>
+          <div class="startchip">Since April</div>
+        </div>
+        <div class="total">1,072 <small>total engagements</small></div>
+        <div class="postcard">
+          <div class="ptitle">Top post</div>
+          <div class="ptext">I don't run my team on a sales methodology.
+
+I run it on a philosophy. And it comes from a book most people don't associate with revenue teams: The Four Agreements by Don Miguel Ruiz.
+
+If you haven't read it, it sounds like a self-help book. And it is. But it's also the best framework for high-performance sales culture I've ever found. Here's how I apply it:
+
+1️⃣ Don't make assumptions. The fastest way to lose a deal is to think you already know what the customer needs.
+2️⃣ Always do your best. Not "do more." Do your best with what you have today.
+3️⃣ Be impeccable with your word. In sales, trust is everything. If you say you'll follow up by Thursday, follow up by Thursday.
+4️⃣ Don't take anything personally. The prospect who ghosts you isn't rejecting you. They're busy, scared, or just not ready.
+
+The best sales cultures I've been part of were built on curiosity and trust. Not scripts and pressure.
+
+Which of the four do you find hardest to practice at work? 👇</div>
+          <div class="pstats">
+            <div><div class="n">211</div><div class="t">Reactions</div></div>
+            <div><div class="n">46</div><div class="t">Comments</div></div>
+            <div><div class="n">2</div><div class="t">Reposts</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div><div class="name">Stephanie Jenkins</div><div class="role">SVP Global Sales</div></div>
+          <div class="startchip">Since March</div>
+        </div>
+        <div class="total">482 <small>total engagements</small></div>
+        <div class="postcard">
+          <div class="ptitle">Top post</div>
+          <div class="ptext">Last week we took our President's Club to Madeira, Portugal, and I'm still thinking about it.
+
+We sailed on a replica of the Santa Maria, tobogganed down the hills of Funchal, hiked through the Fanal forest completely swallowed in fog, and jumped into the Atlantic on the north shore. It was one of those trips where you just keep looking around thinking — how is this real life? 🌺
+
+But what I'll actually remember most is the people. Watching our top performers celebrate alongside the partners and family members who support them through every hard quarter — that's the part that gets me every time.
+
+These are the people who showed up all year. Who pushed through the tough ones. Who delivered.
+
+So proud of this group. 🥂  [+30 colleagues tagged]</div>
+          <div class="pstats">
+            <div><div class="n">207</div><div class="t">Reactions</div></div>
+            <div><div class="n">13</div><div class="t">Comments</div></div>
+            <div><div class="n">1</div><div class="t">Repost</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="top">
+          <div><div class="name">Robin Corralez</div><div class="role">Chief People Officer</div></div>
+          <div class="startchip">Since May</div>
+        </div>
+        <div class="total">184 <small>total engagements</small></div>
+        <div class="postcard">
+          <div class="ptitle">Top post</div>
+          <div class="ptext">Story time: I joined a new company after 12 years at the same place.
+
+Within a week, I started changing things around, feeling an urge to immediately add value. I was trying to help make things better for the people. (At least, that's the story I was telling myself.)
+
+What was actually happening: I was steamrolling the people who had built those "ways of working." I thought I was helping, but I was actually taking away their control. It was humbling.
+
+Here's what I learned the hard way: sometimes you have to slow down to bring people with you. Otherwise you end up rowing in a circle. Alone.
+
+Now when I join a new team, I ask different questions:
+→ Why was this built this way?
+→ Who depends on this?
+→ What does "better" actually mean to the people doing this work every day?
+
+Change still happens. It just happens with people, not to them.
+
+The fastest way forward is usually slower than you think 🚣</div>
+          <div class="pstats">
+            <div><div class="n">90</div><div class="t">Reactions</div></div>
+            <div><div class="n">23</div><div class="t">Comments</div></div>
+            <div><div class="n">0</div><div class="t">Reposts</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BY MONTH / RAMP -->
+  <section>
+    <span class="eyebrow">By month · program ramp</span>
+    <h2>When each leader came online</h2>
+    <div class="timeline">
+      <div class="month">
+        <div class="m">MARCH</div>
+        <div class="who2"><b>Keith Rabkin</b> <span>· CEO</span><br><b>Stephanie Jenkins</b> <span>· SVP Global Sales</span></div>
+        <div class="agg">2,606 <small>combined engagements</small></div>
+      </div>
+      <div class="month">
+        <div class="m">APRIL</div>
+        <div class="who2"><b>Jennifer Nguyen</b> <span>· Account Mgmt</span></div>
+        <div class="agg">1,072 <small>engagements</small></div>
+      </div>
+      <div class="month">
+        <div class="m">MAY</div>
+        <div class="who2"><b>Robin Corralez</b> <span>· Chief People Officer</span></div>
+        <div class="agg">184 <small>engagements</small></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>PandaDoc × RallyUp · LinkedIn performance · Mar–May 2026</div>
+    <div>Generated 2026-05-24</div>
+  </footer>
+
+</div>
+</body>
+</html>
